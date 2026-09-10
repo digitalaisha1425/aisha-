@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Digital marketing portfolio showcasing social media management, Meta Ads, Google Ads, SEO, CRM, WhatsApp marketing, lead management, automation and campaign execution." />
+  <meta name="keywords" content="digital marketer, social media manager, Meta Ads, Google Ads, SEO, CRM, lead management, WhatsApp marketing, marketing automation" />
+  <meta name="author" content="Aisha Kumari" />
+  <meta property="og:title" content="Aisha Kumari | Digital Marketing Portfolio" />
+  <meta property="og:description" content="Connecting content, campaigns, data and automation to grow brands and generate leads." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b132b" />
+  <title>Aisha Kumari | Digital Marketing Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --surface: #ffffff;
+      --surface-2: #eef3ff;
+      --text: #111827;
+      --muted: #64748b;
+      --primary: #2457f5;
+      --primary-dark: #163bb4;
+      --accent: #14b8a6;
+      --dark: #0b132b;
+      --border: #e2e8f0;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(92%, var(--max)); margin: 0 auto; }
+
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
+    }
+    nav {
+      min-height: 72px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand { font-size: 1.05rem; font-weight: 900; letter-spacing: -.02em; }
+    .brand span { color: var(--primary); }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-weight: 700; font-size: .92rem; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--dark); color: #fff; padding: 10px 16px; border-radius: 999px;
+    }
+
+    .hero {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(36,87,245,.18), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(20,184,166,.15), transparent 26%),
+        linear-gradient(135deg, #ffffff 0%, #f5f8ff 52%, #eef4ff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      min-height: 720px;
+      display: grid; grid-template-columns: 1.18fr .82fr; gap: 70px; align-items: center;
+      padding: 72px 0;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 8px 13px; border: 1px solid #cbd8ff; border-radius: 999px;
+      background: #fff; color: var(--primary-dark); font-size: .82rem; font-weight: 800;
+      margin-bottom: 22px;
+    }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.25rem);
+      line-height: .98; letter-spacing: -.065em; max-width: 860px;
+    }
+    .gradient-text {
+      background: linear-gradient(100deg, var(--primary), #7c3aed 70%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-copy { margin: 28px 0 30px; font-size: 1.08rem; color: #475569; max-width: 720px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 19px; border-radius: 12px; font-weight: 850; border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 22px rgba(36,87,245,.24); }
+    .btn-secondary { background: white; border-color: var(--border); }
+
+    .profile-card {
+      position: relative;
+      background: var(--dark); color: white; border-radius: 32px; padding: 34px;
+      box-shadow: 0 28px 75px rgba(15,23,42,.22);
+    }
+    .profile-card::after {
+      content: ""; position: absolute; width: 180px; height: 180px; right: -40px; top: -40px;
+      border-radius: 50%; background: rgba(36,87,245,.30); filter: blur(4px);
+    }
+    .avatar {
+      width: 84px; height: 84px; border-radius: 24px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid; place-items: center; font-size: 2rem; font-weight: 900;
+      margin-bottom: 25px; position: relative; z-index: 1;
+    }
+    .profile-card h2 { font-size: 1.8rem; margin-bottom: 8px; position: relative; z-index: 1; }
+    .profile-card p { color: #cbd5e1; position: relative; z-index: 1; }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; position: relative; z-index: 1; }
+    .pill { padding: 8px 11px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); font-size: .82rem; }
+
+    section { padding: 92px 0; }
+    .section-heading { max-width: 780px; margin-bottom: 44px; }
+    .kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 900; margin-bottom: 10px; }
+    h2.section-title { font-size: clamp(2.1rem, 4vw, 3.75rem); line-height: 1.05; letter-spacing: -.045em; margin-bottom: 16px; }
+    .section-subtitle { color: var(--muted); font-size: 1.02rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { background: var(--surface); padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(15,23,42,.05); }
+    .stat strong { font-size: 2rem; display: block; letter-spacing: -.04em; }
+    .stat span { color: var(--muted); font-size: .9rem; }
+
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 12px 32px rgba(15,23,42,.05); }
+    .icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--surface-2); color: var(--primary); font-weight: 900; margin-bottom: 20px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: .94rem; }
+
+    .dark-section { background: var(--dark); color: white; }
+    .dark-section .section-subtitle { color: #aebbd2; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .project {
+      min-height: 340px; padding: 30px; border-radius: 26px; border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .tag { display: inline-block; width: fit-content; padding: 7px 10px; border-radius: 999px; background: rgba(36,87,245,.22); border: 1px solid rgba(96,165,250,.25); color: #cfe0ff; font-size: .78rem; font-weight: 800; }
+    .project h3 { font-size: 1.55rem; margin: 18px 0 10px; }
+    .project p { color: #b8c3d7; }
+    .project ul { margin: 18px 0 0 18px; color: #d9e1ee; }
+    .project li + li { margin-top: 6px; }
+
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .step { position: relative; padding: 26px 22px; background: #fff; border-radius: 20px; border: 1px solid var(--border); }
+    .step-num { font-size: 2.6rem; color: #d7def0; font-weight: 950; letter-spacing: -.06em; }
+    .step h3 { margin: 8px 0; }
+    .step p { color: var(--muted); font-size: .92rem; }
+
+    .tools { display: flex; flex-wrap: wrap; gap: 12px; }
+    .tool { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 11px 14px; font-weight: 750; color: #334155; }
+
+    .contact-box {
+      padding: 44px; border-radius: 30px; background: linear-gradient(135deg, var(--primary), #6d28d9); color: white;
+      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .contact-box h2 { font-size: clamp(2rem, 4vw, 3.3rem); letter-spacing: -.04em; line-height: 1.05; margin-bottom: 14px; }
+    .contact-box p { color: #e6e8ff; max-width: 720px; }
+    .contact-box .btn { background: white; color: var(--primary-dark); }
+
+    footer { padding: 35px 0 48px; color: var(--muted); font-size: .9rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; min-height: unset; gap: 40px; }
+      .stats, .service-grid, .process { grid-template-columns: repeat(2, 1fr); }
+      .project-grid { grid-template-columns: 1fr; }
+      .contact-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(90%, var(--max)); }
+      nav { min-height: 64px; }
+      .hero-grid { padding: 58px 0; }
+      h1 { font-size: clamp(2.8rem, 15vw, 4.5rem); }
+      section { padding: 70px 0; }
+      .stats, .service-grid, .process { grid-template-columns: 1fr; }
+      .profile-card, .contact-box { padding: 28px 22px; }
+      .hero-actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="#top">Aisha<span>.</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Skills</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a class="nav-cta" href="#contact">Let's Talk</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Digital Marketing • Growth • Automation</div>
+          <h1>Connecting <span class="gradient-text">content, campaigns, data & automation.</span></h1>
+          <p class="hero-copy">
+            I help brands strengthen their digital presence, generate and manage leads, improve campaign performance and build practical marketing workflows across social media, paid ads, SEO, CRM and WhatsApp marketing.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View Selected Work →</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="Profile summary">
+          <div class="avatar">AK</div>
+          <h2>Aisha Kumari</h2>
+          <p>Digital Marketing Executive / Social Media & Lead Management Professional</p>
+          <div class="skill-pills">
+            <span class="pill">Social Media</span>
+            <span class="pill">Meta Ads</span>
+            <span class="pill">Google Ads</span>
+            <span class="pill">CRM</span>
+            <span class="pill">SEO</span>
+            <span class="pill">WhatsApp Marketing</span>
+            <span class="pill">Influencer Coordination</span>
+            <span class="pill">AI & Automation</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">About Me</div>
+          <h2 class="section-title">A marketer who works across the full digital journey.</h2>
+          <p class="section-subtitle">
+            My work combines content execution, paid campaigns, community handling, lead management and reporting. I focus on making marketing activities easier to manage, easier to measure and more aligned with business goals.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>4+ Years</strong><span>Digital & social media experience</span></div>
+          <div class="stat"><strong>Multi-Channel</strong><span>Organic, paid, CRM & outreach</span></div>
+          <div class="stat"><strong>Lead-Focused</strong><span>Campaign execution to CRM follow-up</span></div>
+          <div class="stat"><strong>Automation</strong><span>AI tools, workflows & reporting support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Core Skills</div>
+          <h2 class="section-title">What I can help a brand execute.</h2>
+          <p class="section-subtitle">A practical mix of campaign management, content, lead operations and digital growth support.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="card"><div class="icon">SM</div><h3>Social Media Management</h3><p>Content planning, publishing, scheduling, approvals, comment monitoring, engagement and day-to-day page management.</p></article>
+          <article class="card"><div class="icon">MA</div><h3>Meta Advertising</h3><p>Campaign, ad set and ad management for awareness, traffic, leads and conversions, with creative and audience testing.</p></article>
+          <article class="card"><div class="icon">GA</div><h3>Google Ads</h3><p>Search-focused campaign support, landing-page alignment, keyword intent and lead-generation campaign management.</p></article>
+          <article class="card"><div class="icon">CRM</div><h3>CRM & Lead Management</h3><p>Lead organization, status tracking, reporting, follow-up coordination and improving the flow from enquiry to sales action.</p></article>
+          <article class="card"><div class="icon">SEO</div><h3>SEO & Content</h3><p>Basic technical and on-page SEO, keyword research, content optimization, local SEO support and search-focused content planning.</p></article>
+          <article class="card"><div class="icon">WA</div><h3>WhatsApp & Automation</h3><p>Broadcast planning, lead communication workflows, AI-assisted processes and lightweight automation for repetitive marketing tasks.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="work">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Selected Work</div>
+          <h2 class="section-title">Work that connects marketing execution with business outcomes.</h2>
+          <p class="section-subtitle">Replace the placeholder outcome lines below with your actual metrics, screenshots and case-study links when available.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <div>
+              <span class="tag">Lead Generation</span>
+              <h3>Education Campaign & Lead Operations</h3>
+              <p>Managed digital campaign activities for education-focused lead generation, including ad execution, social content, CRM reporting and follow-up coordination.</p>
+              <ul>
+                <li>Meta lead campaign management</li>
+                <li>Lead tracking and CRM coordination</li>
+                <li>Creative approval and campaign support</li>
+              </ul>
+            </div>
+            <strong>Add metric: Leads / CPL / Conversion improvement</strong>
+          </article>
+
+          <article class="project">
+            <div>
+              <span class="tag">Social Media</span>
+              <h3>Multi-Platform Social Media Management</h3>
+              <p>Handled content scheduling, publishing, engagement monitoring, client approvals, influencer coordination and day-to-day social operations.</p>
+              <ul>
+                <li>Content calendar execution</li>
+                <li>Comments and engagement checks</li>
+                <li>Influencer and campaign coordination</li>
+              </ul>
+            </div>
+            <strong>Add metric: Reach / Engagement / Follower growth</strong>
+          </article>
+
+          <article class="project">
+            <div>
+              <span class="tag">SEO & Recovery</span>
+              <h3>Website Security & SEO Recovery</h3>
+              <p>Supported recovery of a compromised website after hundreds of spam URLs appeared, including issue investigation, cleanup, security strengthening and search clean-up.</p>
+              <ul>
+                <li>Website access and issue diagnosis</li>
+                <li>Compromised file/database cleanup</li>
+                <li>Security hardening and spam URL removal</li>
+              </ul>
+            </div>
+            <strong>Case-study ready: add before/after Search Console screenshots</strong>
+          </article>
+
+          <article class="project">
+            <div>
+              <span class="tag">Automation</span>
+              <h3>Marketing Workflow Improvement</h3>
+              <p>Used structured reporting, CRM processes, WhatsApp communication and AI-assisted workflows to reduce repetitive marketing work and improve visibility.</p>
+              <ul>
+                <li>Lead-flow organization</li>
+                <li>Reporting and operational support</li>
+                <li>AI-assisted marketing workflows</li>
+              </ul>
+            </div>
+            <strong>Add metric: Hours saved / response-time improvement</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">How I Work</div>
+          <h2 class="section-title">Simple, measurable and execution-focused.</h2>
+        </div>
+        <div class="process">
+          <div class="step"><div class="step-num">01</div><h3>Understand</h3><p>Clarify the business goal, target audience, offer, current funnel and available channels.</p></div>
+          <div class="step"><div class="step-num">02</div><h3>Plan</h3><p>Choose the right content, campaign, lead and reporting workflow for the objective.</p></div>
+          <div class="step"><div class="step-num">03</div><h3>Execute</h3><p>Launch, coordinate, publish, manage leads and keep campaign operations moving.</p></div>
+          <div class="step"><div class="step-num">04</div><h3>Improve</h3><p>Review performance, identify gaps and optimize creatives, targeting, content and processes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Tools</div>
+          <h2 class="section-title">Platforms I work with.</h2>
+        </div>
+        <div class="tools">
+          <span class="tool">Meta Ads Manager</span>
+          <span class="tool">Google Ads</span>
+          <span class="tool">Google Analytics 4</span>
+          <span class="tool">Google Search Console</span>
+          <span class="tool">SEMrush</span>
+          <span class="tool">Ahrefs</span>
+          <span class="tool">WordPress</span>
+          <span class="tool">Canva</span>
+          <span class="tool">Zoho CRM</span>
+          <span class="tool">Google Sheets</span>
+          <span class="tool">WhatsApp Marketing</span>
+          <span class="tool">AI Tools</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>Have a marketing project, campaign or growth problem?</h2>
+            <p>I’m open to digital marketing roles, freelance projects and collaborations involving social media, performance campaigns, SEO, lead operations, CRM or marketing automation.</p>
+          </div>
+          <!-- Replace the email address and LinkedIn URL below with your own details -->
+          <a class="btn" href="mailto:your-email@example.com">Email Me →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Aisha Kumari. All rights reserved.</span>
+      <span>Built as a lightweight static portfolio for GitHub Pages.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
